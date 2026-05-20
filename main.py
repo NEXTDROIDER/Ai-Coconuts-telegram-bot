@@ -88,6 +88,7 @@ def ask_ai(messages):
     data = {
         "model": MODEL,
         "messages": messages,
+        "max_tokens": 25000
     }
 
     r = requests.post(
