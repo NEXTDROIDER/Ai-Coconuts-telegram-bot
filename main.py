@@ -218,8 +218,13 @@ async def chat(update: Update, context: ContextTypes.DEFAULT_TYPE):
 # MAIN
 # =========================================
 
+import asyncio
+
 def main():
     print(f"{BOT_NAME} starting...")
+
+    loop = asyncio.new_event_loop()
+    asyncio.set_event_loop(loop)
 
     app = ApplicationBuilder().token(APITG).build()
 
